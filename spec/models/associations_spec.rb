@@ -68,13 +68,13 @@ RSpec.describe User, type: :model do
 end
 
 RSpec.describe User, type: :model do
-  describe "has a belongs_to association defined called 'own_photos' with Class name 'Photo' and foreign key 'owner_id'", points: 1 do
+  describe "has a has_many association defined called 'own_photos' with Class name 'Photo' and foreign key 'owner_id'", points: 1 do
     it { should have_many(:own_photos).class_name("Photo").with_foreign_key("owner_id") }
   end
 end
 
 RSpec.describe User, type: :model do
-  describe "has a belongs_to association defined called 'likes' with Class name 'Like' and foreign key 'fan_id'", points: 1 do
+  describe "has a has_many association defined called 'likes' with Class name 'Like' and foreign key 'fan_id'", points: 1 do
     it { should have_many(:likes).class_name("Like").with_foreign_key("fan_id") }
   end
 end
